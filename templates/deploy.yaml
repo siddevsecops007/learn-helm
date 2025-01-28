@@ -16,7 +16,8 @@ spec:
       app: {{ .Values.name }}
   template:
     metadata:
-      {{- template "mychart.labels" }}
+      labels:
+        app: {{ .Values.name }}
     spec:
       containers:
         - name: nginx

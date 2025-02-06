@@ -9,4 +9,6 @@ data:
   drink: {{ .Values.favorite.drink | default "tea" | quote }}
   food: {{ .Values.favorite.food | upper | quote }}
 
+  #
+
 

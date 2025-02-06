@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.name }}
   labels:
-{{- include "mychart.labels" . | indent 2 }}
+{{- include "mychart.labels" . | indent 4 }}
 spec:
   replicas: 1
   selector:
@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "mychart.labels" . | indent 4 }}
+        {{- include "mychart.labels" . | indent 8 }}
     spec:
       containers:
         - name: nginx

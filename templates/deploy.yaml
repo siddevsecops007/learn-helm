@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Values.name }}
   labels:
-{{- include "mychart.labels" . | indent 4 }}
+{{- include "mychart.labels" . | indent 2 }}
 spec:
   replicas: 1
   selector:

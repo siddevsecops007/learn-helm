@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.name }}
-  labels:
-    {{- include "mychart.labels" | indent 4}}
 spec:
   replicas: 1
   selector:
@@ -12,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "mychart.labels" | indent 8}}
+        app: {{ .Values.name }}
     spec:
       containers:
         - name: nginx
